@@ -60,12 +60,12 @@ function App() {
   return (
     
    <div className="flex justify-center h-screen w-full items-center bg-black">
-    <div className="flex flex-col justify-center rounded-lg items-center w-auto bg-blue-700 p-5 ">
+    <div className="flex flex-col justify-center rounded-lg items-center  w-auto bg-blue-700 p-5 ">
     {winner && <div className="flex m-5 mx-2 text-green-500 text-2xl font-bold" > { winner} </div>}
       <div className="grid grid-cols-3 gap-4 p-5  justify-center items-center">
          {
             board.map((imgname,i)=>
-            <div key={i} className=" w-[70px] h-[70px]" onClick={()=>hanldeimg(i)}>
+            <div key={i} className=" w-[70px] h-[70px] cursor-pointer" onClick={()=>hanldeimg(i)}>
            <img src={imgname} key={i} className=" w-full h-full rounded-lg" /></div>
       )}
       </div>
